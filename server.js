@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 app.use(express.json({ limit: '64kb' }));
 
-// Health check for Render deployment
+// Health check for Render (This fixes the "Awaiting" status)
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok' });
 });
